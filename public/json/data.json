@@ -1,0 +1,275 @@
+{
+  "store": {
+    "name": "TestName",
+    "description": "TestDescription",
+    "location":"Lebanon,Tripoli",
+    "wifi_pass":"12345678tt",
+    "foreground_color": "#123456"
+  },
+  "categories": [
+    {
+      "name": "Food",
+      "description": "pizza data test sld ",
+      "subCategories": [
+        {
+          "name": "PIZZAS",
+          "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+          "products": [
+            {
+              "name": "Margherita",
+              "description": "A hugely popular margherita, with a deliciously tangy single cheese topping",
+              "weight": null,
+              "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+              "active":true,
+              "visible":true,
+              "variants": [
+                {
+                  "name": "Small",
+                  "price": 100
+                },
+                {
+                  "name": "Medium",
+                  "price": 200
+                },
+                {
+                  "name": "Large",
+                  "price": 300
+                }
+              ],
+              "addOns": [
+                {
+                  "name": "Sauce",
+                  "type": "multiple",
+                  "options": [
+                    {
+                      "name": "Tomato",
+                      "price": 0
+                    },
+                    {
+                      "name": "Barbeque",
+                      "price": 50
+                    }
+                  ]
+                },
+                {
+                  "name": "Cheese",
+                  "type": "multiple",
+                  "options": [
+                    {
+                      "name": "Mozzarella",
+                      "price": 10
+                    },
+                    {
+                      "name": "Cheddar",
+                      "price": 50
+                    }
+                  ]
+                },
+                {
+                  "name": "Toppings",
+                  "type": "multiple",
+                  "options": [
+                    {
+                      "name": "Olives",
+                      "price": 20
+                    },
+                    {
+                      "name": "Mushrooms",
+                      "price": 30
+                    }
+                  ]
+                },
+                {
+                  "name": "Fries",
+                  "type": "single",
+                  "options": [
+                    {
+                      "name": "100g",
+                      "price": 10
+                    },
+                    {
+                      "name": "200g",
+                      "price": 20
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PIZZAS1",
+          "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+          "products": [
+            {
+              "name": "Margherita1",
+              "description": "A hugely popular margherita, with a deliciously tangy single cheese topping",
+              "weight": 200,
+              "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+              "active":true,
+              "visible":true,
+              "variants": [
+                {
+                  "name": "Small",
+                  "price": 100
+                }
+              ],
+              "addOns": [
+
+              ]
+            },
+            {
+              "name": "Margherita2",
+              "description": "A hugely popular margherita, with a deliciously tangy single cheese topping",
+              "weight": 50,
+              "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+              "active":false,
+              "visible":false,
+              "variants": [
+                {
+                  "name": "200g",
+                  "price": 100
+                }
+              ],
+              "addOns": [
+
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "drinks",
+      "description": "pizza data test sld ",
+      "subCategories": [
+        {
+          "name": "cold",
+          "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+          "products": [
+            {
+              "name": "ice tea",
+              "description": "A hugely popular margherita, with a deliciously tangy single cheese topping",
+              "weight": null,
+              "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+              "active":true,
+              "visible":true,
+              "variants": [
+                {
+                  "name": "Small",
+                  "price": 100
+                },
+                {
+                  "name": "Medium",
+                  "price": 200
+                },
+                {
+                  "name": "Large",
+                  "price": 300
+                }
+              ],
+              "addOns": [
+                {
+                  "name": "Sauce",
+                  "type": "multiple",
+                  "options": [
+                    {
+                      "name": "Tomato",
+                      "price": 0
+                    },
+                    {
+                      "name": "Barbeque",
+                      "price": 50
+                    }
+                  ]
+                },
+                {
+                  "name": "Cheese",
+                  "type": "multiple",
+                  "options": [
+                    {
+                      "name": "Mozzarella",
+                      "price": 10
+                    },
+                    {
+                      "name": "Cheddar",
+                      "price": 50
+                    }
+                  ]
+                },
+                {
+                  "name": "Toppings",
+                  "type": "multiple",
+                  "options": [
+                    {
+                      "name": "Olives",
+                      "price": 20
+                    },
+                    {
+                      "name": "Mushrooms",
+                      "price": 30
+                    }
+                  ]
+                },
+                {
+                  "name": "Fries",
+                  "type": "single",
+                  "options": [
+                    {
+                      "name": "100g",
+                      "price": 10
+                    },
+                    {
+                      "name": "200g",
+                      "price": 20
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "hot drinks",
+          "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+          "products": [
+            {
+              "name": "coffee",
+              "description": "A hugely popular margherita, with a deliciously tangy single cheese topping",
+              "weight": 200,
+              "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+              "active":true,
+              "visible":true,
+              "variants": [
+                {
+                  "name": "Small",
+                  "price": 100
+                }
+              ],
+              "addOns": [
+
+              ]
+            },
+            {
+              "name": "tea",
+              "description": "A hugely popular margherita, with a deliciously tangy single cheese topping",
+              "weight": 50,
+              "image": "https://dyj6gt4964deb.cloudfront.net/images/0593041a-23d5-4762-a201-1511021310df.jpg",
+              "active":false,
+              "visible":false,
+              "variants": [
+                {
+                  "name": "200g",
+                  "price": 100
+                }
+              ],
+              "addOns": [
+
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,38 +1,326 @@
-.App {
-  text-align: center;
+:root {
+  --foreground-color: #f7906c; /* Default value */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background: #f3f1ef;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.color-fg{
+  color: var(--foreground-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  /* scrollbar-color: blue orange; */
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+  margin-left: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+  background: orange;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: blue;
+  border-radius: 20px;
+  border: 3px solid orange;
+}
+
+.main {
+  height: 100vh;
+  position: relative;
+  width: 500px;
+  margin: auto;
+}
+.top-img-container {
+  /* position: absolute; */
+  top: 0;
+  z-index: -1;
+}
+
+.menu {
+  padding-bottom: 2rem;
+  border-radius: 30px;
+  margin-top: -30%;
+  background-color: white;
+  padding-top: 2rem;
+}
+
+.menu-buttons {
   display: flex;
-  flex-direction: column;
+}
+
+.menu-button {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  background: #fff;
+  border: 3px solid var(--foreground-color);
+  border-radius: 32px;
+  padding: 0.5rem 1rem;
+  color: var(--foreground-color);
+  /* font-weight: 600; */
+  white-space: nowrap;
+  transition: background 0.25s, color 0.25s;
+  display: flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  font-weight: bold;
   align-items: center;
+}
+
+.menu-button:hover,
+.menu-button.active {
+  background: var(--foreground-color);
+  color: #fff;
+}
+
+.search-input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+.search {
+  background-color: #f3f1ef;
+  border-radius: 30px;
+}
+
+.search-btn {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.5rem 0.8rem;
+  transform: translateX(0px);
+}
+
+.menu-item {
+  position: relative;
+  /* aspect-ratio: 3/3; */
+  margin: 1rem 0;
+}
+
+.menu-item img {
+  object-fit: cover;
+  position: relative;
+  border-radius: 30px;
+  /* z-index: 1; Ensure the image stays above the overlay */
+  height: 180px;
+  width: 100%;
+  transform-origin: 0%;
+}
+
+.menu-item .overlay {
+  border-radius: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  /* height: auto; */
+  background-color: rgba(0, 0, 0, 0.2); /* Adjust the opacity as needed */
+  z-index: 2;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  aspect-ratio: 3/3;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  /* position: relative; */
+  font-size: 28px;
+  /* margin-top: 20px; */
+  letter-spacing: 3px;
+  font-weight: light;
+  cursor: pointer;
+}
+
+.item-name {
+  font-size: 20px;
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+.menu-item-items {
+  padding: 1rem 0;
+}
+
+.item-image {
+  height: 280px !important;
+}
+
+.order-menu {
+  display: flex;
+  justify-content: end;
+  font-size: 20px;
+}
+
+.order-menu i {
+  padding: 1rem;
+  border-radius: 50%;
+  background-color: var(--foreground-color);
+  /* filter: invert(1); */
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.show-order {
+  position: sticky;
+  margin-top: 2rem;
+  bottom: 0;
+  /* display: none; */
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 1rem;
+  transform: translateY(2px);
+  border: none;
+  color: white;
+  background-color: var(--foreground-color);
+  z-index: 2;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.order-button {
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+}
+
+.popup-container {
+  display: none;
+  /* display: flex; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+}
+
+.popup-container::before {
+  content: "";
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+
+.popup {
+  width: 35%;
+  margin: auto;
+  background-color: white;
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+  border-radius: 12px;
+}
+
+.b-12 {
+  height: 280px !important;
+  border-radius: 12px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.price {
+  font-size: 18px;
+  color: var(--foreground-color);
+  font-weight: bold;
+}
+
+.cross-button {
+  position: absolute;
+  border: none;
+  /* border: 2px solid black; */
+  right: 10px;
+  background: white;
+  z-index: 8;
+  outline: none;
+  /* padding: 0.5rem; */
+  border-radius: 50%;
+  font-size: 25px;
+  aspect-ratio: 1/1;
+}
+
+.add-to-order {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 1rem;
+  /* transform: translateY(2px); */
+  border: none;
+  color: white;
+  background-color: var(--foreground-color);
+  /* z-index: 10; */
+  border-radius: 12px;
+  /* width: max-content; */
+}
+
+.types {
+  height: 200px;
+  /* overflow-y: scroll */
+}
+
+.over-y {
+  overflow-y: scroll;
+}
+
+.menu-item-orders {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.menu-item-orders-text {
+  color: #868686;
+}
+
+.menu-item-orders-price {
+  color: var(--foreground-color);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul {
+  margin: 0;
+}
+
+.back {
+  outline: none;
+  border: 1px solid black;
+  background-color: var(--foreground-color);
+  color: white;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 30px;
+}
+.back-main {
+  outline: none;
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
 }
